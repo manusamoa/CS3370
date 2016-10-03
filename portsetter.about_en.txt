@@ -1,0 +1,3 @@
+Developed by: Jeremy Ellsworth
+Contracted by: David Wagstaff
+Objective of designing the program was for a school project.

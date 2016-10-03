@@ -1,0 +1,12 @@
+
+Usage of Portsetter Program.
+
+-h/-?   --help      Shows usage of Portsetter Program.
+-p      --port      Listens to the given port (ex. -p 321).
+-v      --version   Show the version of the program.
+-!      --about     About file for the program.
+-ex                 This needs to follow "-p" and can use an environment variable
+                    to open the port. (ex. "setport -p -e MY_PORT").
+
+                    Rules:  Port must be between 1 and 65000.  Be aware port 
+                            commands are case-sensitive.
