@@ -1,0 +1,3 @@
+Desarrollado por: Jeremy Ellsworth
+Contraído por: David Wagstaff
+Objetivo de diseñar el programa era para un proyecto escolar.

@@ -1,1 +1,13 @@
-Spanish Baby
+
+Uso de Programa Portsetter.
+
+-h/-?   --help      Muestra el uso del Programa Portsetter.
+-p      --port      Escucha en ese puerto (ex. -p 321).
+-v      --version   Muestra la versión del programa.
+-!      --about     Acerca de los archivos para el programa.
+-e                  Esto tiene que seguir "-p" y se puede utilizar una variable de entorno
+                    para abrir el puerto. (ex. "setport -p -e MY_PORT").
+                    
+                        
+                    Reglas: puerto debe estar entre 1 y 65000. Sea consciente de puerto
+                            comandos entre mayúsculas y minúsculas.
