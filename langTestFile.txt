@@ -1,0 +1,30 @@
+LANG=es
+setport -h
+LANG=
+LANGUAGE=es_ES.UTF-8
+setport -h
+LANGUAGE=
+LANG=es_MX.UTF-8
+setport -h
+LANG=
+LANG=es.UTF-8
+setport -h
+LANG=
+LANG=es_UR
+setport -h
+LANG=
+LANG=en
+setport -h
+LANG=
+LANG=ES
+setport -h
+LANG=
+LANG=ES_es
+setport -h
+LANG=
+LANG=ESASDF
+setport -h
+LANG=
+LANG=esadf
+setport -h
+LANG=
