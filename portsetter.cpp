@@ -11,8 +11,7 @@ vector<string> _port = {"-p", "--port"};
 vector<string> _help = {"-h", "--help", "-?"};
 vector<string> _about = {"-!", "--about"};
 vector<string> _version = {"-v", "--version"};
-string _defaultLanguage = "en";
-string _language;
+string _language = "en";
 
 enum {
     ERROR,
@@ -180,7 +179,7 @@ string getEnvLanguage() {
     if(!nullLanguage(getenv("LC_MESSAGES"))) return getenv("LC_MESSAGES");
     if(!nullLanguage(getenv("LANG"))) return getenv("LANG");
     
-    return _defaultLanguage;
+    return _language;
 }
 
 bool nullLanguage(char* env) {
@@ -194,24 +193,21 @@ bool nullLanguage(char* env) {
 
 void setLanguage(string language) {
     
-    if(language != _defaultLanguage) {
+    if(language != _language) {
         regex reg("([a-z][a-z])(_[A-Z][A-Z](.UTF-8)?)?");
         bool isMatch = regex_match(language,reg);
         if(isMatch) {
             if(language.substr(0,2).compare("es") == 0) {
                 _outputText = esResponse;
                 _language = "es";
+                return;
             }
-            else {
-                _language = _defaultLanguage;
-                cout << "Missing pl translation files. Using English." << endl;
-            }
+            else cout << "Missing pl translation files. Using English." << endl;
         }
-        else {
-            _language = _defaultLanguage;
-            cout << "Bad Language specified. Using English." << endl;
-        }
+        else cout << "Bad Language specified. Using English." << endl;
     }
+    
+    _language = language;
 }
 
 void printUsageRules() {
