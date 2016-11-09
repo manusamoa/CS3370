@@ -23,3 +23,9 @@ setport --port
 setport -p 90642
 setport -x 45321
 setport -P 714
+setport -p --environment
+setport --port --environment
+export BAR=300
+setport -p --environment BAR
+setport -p --environment Bogus
+setport --environment
