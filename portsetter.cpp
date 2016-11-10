@@ -66,8 +66,8 @@ int main(int argc, char *args[]) {
 
         if(isFlagPort(flag)) {
             string eFlag = args[2];
-            if(eFlag.compare("-e") == 0) {
-                if(argc != 4) printPortsetter(getenv("PORT"));
+            if(eFlag.compare("-e") == 0||eFlag.compare("--environment")==0) {
+		if(argc != 4) printPortsetter(getenv("PORT"));
                 else printPortsetter(getenv(args[3]));
             }
             else printPortsetter(args[2]);
@@ -154,7 +154,7 @@ bool argumentErrorCatch(int argc, char* args[]) {
         if(isFlagPort(flag) && argc <= 2) throw 3;
         if(isFlagPort(flag) && !isPortValid(args[2])) {
             string eFlag = args[2];
-            if(eFlag.compare("-e") != 0) throw 4;
+            if(eFlag.compare("-e") != 0&& eFlag.compare("--environment") != 0) throw 4;
         }
     }
     catch(int e) {
